@@ -10,13 +10,13 @@ var config = {
 
 firebase.initializeApp(config);
 
-const databaseRef = firebase.database().ref('recentUserPush');
+var dbRef = firebase.database().ref('recentUserPush');
 
 // Capture Button Click for search box
 $("#submit-button").click(function(event) {
   event.preventDefault();
 
-  databaseRef.push({
+  dbRef.push({
     neighborhood: $("#input-neighborhood").val().trim().
     firebase.database.ServerValue.TIMESTAMP
   });
