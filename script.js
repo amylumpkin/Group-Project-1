@@ -21,3 +21,23 @@ $("#submit-button").click(function(event) {
     firebase.database.ServerValue.TIMESTAMP
   });
 });
+
+var neighborhood = [];
+
+function displaySearchResults() {
+
+    var queryURL =
+    "http://api.wunderground.com/api/a4c1cc1f438c8eaf/conditions/q/"+ state + "/" + city +".json"
+  // "http://api.wunderground.com/api/a4c1cc1f438c8eaf/conditions/q/NC/raleigh.json"
+}
+
+  $.ajax({
+  url : queryURL,
+  dataType : "jsonp",
+  success : function(parsed_json) {
+  var location = parsed_json['location']['city'];
+  var temp_f = parsed_json['current_observation']['temp_f'];
+  alert("Current temperature in " + location + " is: " + temp_f);
+  }
+  });
+});
