@@ -1,24 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-  <!-- need to add firebase link
+<!-- 
      - need to make the nav bar sticky
-     - add more text in nav bar to explain briefly the purpose of website?
-     - or add explaination under carousel?
-     - css file link, get css out of this file
-     - play with fonts, colors
+     - play with fonts, colors, background colors
      - add images
      - add actual content
      
      -->
 
-  <title>Neighborhood Search</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Neighborhood Search</title>
+<!-- bootstrap -->    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- css style sheet -->    
+    <link rel="stylesheet" type="text/css" href="style.css">
+<!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  
+
+
 
 
   <style>
@@ -43,7 +45,10 @@
     .carousel-inner img {
       width: 100%; 
       margin: auto;
-
+    }
+    .site-description {
+      padding-top: 15px;
+      font-size: 
     }
 /* Hide the carousel text when the screen is less than 600 pixels wide */
         @media (max-width: 600px) {
@@ -79,6 +84,7 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
+      
       <div class="item active">
         <img src="https://placehold.it/1200x400?text=IMAGE" alt="Image">
         <div class="carousel-caption">
@@ -94,6 +100,15 @@
           <p>We Can Help You Choose a Destination!</p>
         </div>      
       </div>
+
+      <div class="item">
+        <img src="https://placehold.it/1200x400?text=Another Image Maybe" alt="Image">
+        <div class="carousel-caption">
+          <h3>Explore Your Hometown...</h3>
+          <p>...or any city in America!</p>
+        </div>      
+      </div>
+
     </div>
 
     <!-- Left and right controls -->
@@ -108,10 +123,14 @@
 </div>
   
 <div class="container text-center">  
-    <form>
+      <div class="site-description">
+        Here we write a description of what this site is designed to do...all kinds of information about a city in 
+        just one place. Whether you're moving or thinking about a trip, or even just want to explore your home city, this site is awesome! Some more text here to fill up space so that it looks better. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Let's get started!
+      </div>
+
       <form id="search">
-        <h3>Start Your Search: </h3><input type="text" value id="input" placeholder="Enter City Name Here">
-        <input type="submit" value="Search!">
+        <h3>Start Your Search: </h3><input type="text" value id="input-neighborhood" placeholder="Enter City Name Here">
+        <input type="submit" id="submit-button value="Search!">
       </form>
 
  
@@ -140,6 +159,11 @@
   <div class="container">
   Copyright &copy; 2018 Our Name Here
 </footer>
+
+<!-- javascipt & jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
 
 
 </body>
