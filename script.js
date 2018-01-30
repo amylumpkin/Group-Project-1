@@ -22,17 +22,21 @@
 //   // });
 // });
 
-// var neighborhood = [];
-
 console.log("testing page");
 
-$("submit-button").on("click", function(event) {
+var city;
+var state;
+
+$("#submit-button").on("click", function(event) {
   console.log("button clicked");
   event.preventDefault();
 
   var inputResults = $("#input-neighborhood").val();
   console.log(inputResults);
 
+  var address = inputResults.split(",");
+  state = address[1];
+  city = address[0];
     var queryURL =
     "http://api.wunderground.com/api/a4c1cc1f438c8eaf/conditions/q/"+ state + "/" + city +".json";
   // "http://api.wunderground.com/api/a4c1cc1f438c8eaf/conditions/q/NC/raleigh.json"
@@ -48,15 +52,3 @@ console.log(queryURL);
 
   });
 })
-
-
-
-
-
-  // $.ajax({
-  // url : queryURL,
-  // dataType : "jsonp",
-  // success : function(parsed_json) {
-  // var location = parsed_json['location']['city'];
-  // var temp_f = parsed_json['current_observation']['temp_f'];
-  // alert("Current temperature in " + location + " is: " + temp_f);
