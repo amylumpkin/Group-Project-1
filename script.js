@@ -40,4 +40,4 @@ function displaySearchResults() {
   alert("Current temperature in " + location + " is: " + temp_f);
   }
   });
-});
+}); 
