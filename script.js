@@ -22,22 +22,33 @@ $("#submit-button").click(function(event) {
   });
 });
 
-var neighborhood = [];
+// var neighborhood = [];
 
-function displaySearchResults() {
+$("submit-button").on("click", function(event) {
+  event.preventDefault();
+
+  var inputResults = $("#input-neighborhood").val();
 
     var queryURL =
-    "http://api.wunderground.com/api/a4c1cc1f438c8eaf/conditions/q/"+ state + "/" + city +".json"
+    "http://api.wunderground.com/api/a4c1cc1f438c8eaf/conditions/q/"+ state + "/" + city +".json";
   // "http://api.wunderground.com/api/a4c1cc1f438c8eaf/conditions/q/NC/raleigh.json"
-}
 
   $.ajax({
-  url : queryURL,
-  dataType : "jsonp",
-  success : function(parsed_json) {
-  var location = parsed_json['location']['city'];
-  var temp_f = parsed_json['current_observation']['temp_f'];
-  alert("Current temperature in " + location + " is: " + temp_f);
-  }
+    url:queryURL,
+    method: "GET"
+  }).then(function(response){
+    console.log(response);
   });
-});
+})
+
+
+
+
+
+  // $.ajax({
+  // url : queryURL,
+  // dataType : "jsonp",
+  // success : function(parsed_json) {
+  // var location = parsed_json['location']['city'];
+  // var temp_f = parsed_json['current_observation']['temp_f'];
+  // alert("Current temperature in " + location + " is: " + temp_f);
