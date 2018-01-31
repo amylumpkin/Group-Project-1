@@ -1,19 +1,12 @@
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Bree Serif', serif;
-}
 
-.container {
-  font-family: 'Bree Serif', serif;
-}
+h1, h2, h3, h4, h5, h6 {font-family: 'Bree Serif', serif;}
 
-h3 {
-  font-size:20px;
-}
+#container.text-center  {font-family: 'Bree Serif', serif;}
 
-p {
-  font-family: 'Bree Serif', serif;
-  font-size: 16px;
-}
+h3 {font-size:20px;}
+
+p {font-family: 'Bree Serif', serif;
+font-size: 16px}
 
 
 .navbar {
@@ -44,3 +37,4 @@ p {
             display: none; 
           }
         }
+
