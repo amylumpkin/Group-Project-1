@@ -130,13 +130,24 @@
      <p>Here we write a description of what this site is designed to do...all kinds of information about a city in just one place. Whether you're moving or thinking about a trip, or even just want to explore your home city, this site is awesome! Some more text here to fill up space so that it looks better. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Let's get started! </p>
       </div>
 
-      <form id="search" action="second-page.html">
+      <form id="search">
         <h3>Start Your Search: </h3>
-        <input type="text" value id="input-neighborhood" placeholder="City, State">
-        <input type="text" value id="input-zip-code" placeholder="Zip Code">
-        <input type="submit" id="submit-button" value="search"> <!-- <a href="second-page.html"> -->
-      </form>
+        <form action="/action_page.php">
+         <select name="cars">
+           <option value="city-state">City, State</option>
+           <option value="zipcode">Zip Code</option>
+           <option value="near-me">Near Me</option>
+           
+         </select>
 
+
+         <input type="text" value id="input-city" placeholder="">
+          <input type="submit" id="submit-button" value="search">
+        </form>
+         <!-- <a href="second-page.html"> -->
+      </form>
+<!-- <input type="text" value id="input-neighborhood" placeholder="City, State">
+        <input type="text" value id="input-zip-code" placeholder="Zip Code">  -->
  
   <div class="row">
 
