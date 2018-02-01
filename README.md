@@ -1,10 +1,16 @@
 # Around The Block
 
-First group project implementing HTML, CSS, Bootstrap, Javascript, API's, Ajax, Google Firebase and more!
+Around the block is a website designed to help people find new neighborhoods to live in and/or explore.  Using Around the Block gives the user a feel for the locale and culture rather than a standard real estate search. Several websites already exist that help people search for real estate, so Around The Block offers something we felt was missing...a site that allows users to explore other characteristics of their chosen city or neighborhood.
 
 ## Built With
 
-* [Bootstrap](https://getbootstrap.com/) - Used to create the site layouts
+* HTML 5
+* CSS 3
+* Bootstrap
+* Javascript
+* jQuery
+* API's
+* Ajax
 
 ## Authors
 
