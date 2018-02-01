@@ -37,18 +37,44 @@ $("#submit-button").on("click", function(event) {
   var address = inputResults.split(",");
   state = address[1];
   city = address[0];
+
     var queryURL =
     "http://api.wunderground.com/api/a4c1cc1f438c8eaf/conditions/q/"+ state + "/" + city +".json";
   // "http://api.wunderground.com/api/a4c1cc1f438c8eaf/conditions/q/NC/raleigh.json"
 console.log(queryURL);
 
+
+
+
   $.ajax({
     url:queryURL,
     method: "GET"
   }).then(function(response){
-    console.log(response);
+    console.log(response.current_observation.image)
+    console.log(response.current_observation.observation_location.city);
 
-    $("#testing").append(response);
+    // window.location = 'second-page.html'
+    // var displayData = $('<div>');
+    // displayData.html = '<p>' + response.current_observation.observation_location.city + '</p>';
+    // $("#city-name-here").append('<p>Hello world!</p>');
+    // console.log('hey im still working after window change')
+    // searchBar.remove()
+
+    const weatherDiv = $('<div>')
+    weatherDiv.html(
+      `<div id="weather">
+        <h1>Weather</h1>
+          <div class="row">
+            <div class="col-md-12" style="background-color: gray; padding-bottom: 25px;">
+                <p>${response.current_observation.observation_location.city}</p>
+            </div>
+          </div>
+        </div>`
+    )
+
+    $('#displayContent').html('')
+    $('#displayContent').append(weatherDiv)
+
 
   });
 })
