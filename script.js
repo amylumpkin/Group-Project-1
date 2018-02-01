@@ -22,7 +22,13 @@
 //   // });
 // });
 
+$(document).ready(function() {
+
+$(".row").css("display", "block");
+$(".search-results").css("display", "none");
+
 console.log("testing page");
+
 
 var city;
 var state;
@@ -31,6 +37,10 @@ $("#submit-button").on("click", function(event) {
   console.log("button clicked");
   event.preventDefault();
 
+      $(".row").css("display", "none");       //Amy added
+      $(".search-results").css("display", "block");
+
+      
   var inputResults = $("#input-neighborhood").val();
   console.log(inputResults);
 
@@ -51,4 +61,8 @@ console.log(queryURL);
     $("#testing").append(response);
 
   });
+})
+
+
+//end document ready function
 })
