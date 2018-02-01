@@ -5,13 +5,13 @@ h1, h2, h3, h4, h5, h6, p {font-family: 'Bree Serif', serif;}
 
 h3 {
   font-size:20px;
-  padding-right: 60px;
+  text-align: center;
 }
 
 p {
   font-family: 'Bree Serif', serif;
   font-size: 16px;
-  padding-right: 60px;
+  
 }
 
 
@@ -24,12 +24,14 @@ p {
       width: 33.33333333%;
       padding-top: 10px;
       color:#405d27;
+
     }
 
     footer {
       background-color:#405d27;
       padding: 25px;
       text-align: center;
+      color: white;
     }
     
     .carousel-inner img {
@@ -37,10 +39,22 @@ p {
       margin: auto;
 
     }
-/* Hide the carousel text when the screen is less than 600 pixels wide */
+/* Hides the carousel text when the screen is less than 600 pixels wide */
         @media (max-width: 600px) {
           .carousel-caption {
             display: none; 
-          }
         }
+      }
+
+
+
+
+
+ 
+
+
+
+
+
+
 
