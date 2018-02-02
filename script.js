@@ -55,11 +55,12 @@ $("#submit-button").on("click", function(event) {
     var queryURLair =
     "http://api.waqi.info/search/?token=68441e6dfd4c245577443bc4809bdc431b170095&keyword="+city+"json";
   //http://api.waqi.info/search/?token="+token()+"&keyword="+keyword  
-  var queryURLyelpr
+    var queryURLyelpr
+    var queryURLschool = "https://api.schooldigger.com/v1.1/schools?st="+ state +"&city="+ city+ "&perPage=2&sortBy=rank&appID=7c44cfcc&appKey=53c1651cdc939f078f21cf3bdaf98356";
    
 console.log(queryURL);
 console.log(queryURLair);
-//console.log(queryURLyelp);
+console.log(queryURLyelpr);
 
   $.ajax({
     url:queryURL,
@@ -68,10 +69,11 @@ console.log(queryURLair);
   }).then(function(response){
     console.log(response);
     console.log(response.current_observation.display_location.latitude); 
+    console.log(response.current_observation.display_location.longitude);
 
     $("#testing").append(response);
 
-    function yelp(data){
+    function yelp(){
       Lat = response.current_observation.display_location.latitude;
       Long = response.current_observation.display_location.longitude;
        var queryURLyelpr =
@@ -102,7 +104,16 @@ console.log(queryURLair);
       method: "GET"
     }).then(function(response){
       console.log(response);
+      var air = response;
+      console.log(air);
     });
+
+  $.ajax({
+    url:queryURLschool,
+    method: "Get"
+  }).then(function(response){
+    console.log(response);
+  })
 
 })
 })
