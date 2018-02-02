@@ -40,8 +40,8 @@ $("#submit-button").on("click", function(event) {
       $(".row").css("display", "none");       //Amy added
       $(".search-results").css("display", "block");
 
-      
-  var inputResults = $("#input-neighborhood").val();
+
+  var inputResults = $("#input-city").val();
   console.log(inputResults);
 
   var address = inputResults.split(",");
