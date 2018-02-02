@@ -36,13 +36,33 @@ var state;
 function yelp(data){};
 
 
+
+//$(document).ready(function () {
+    //$.get('https://cors-anywhere.herokuapp.com/http://jsonip.com', function (res) {
+       // (console.log)('IP Address is: ' + res.ip);
+    //});
+//});
+
+// $(document).ready(function () {
+//   $.getJSON("http://smart-ip.net/geoip-json?callback=", function(data) {
+//       console.log('My IP Address is: ' + data.host);
+//   });
+// });
+
+
+
+
 // accepts the user's input and splits the string into useable data for API's State, City
-$("#submit-button").on("click", function(event) {
-  console.log("button clicked");
-  event.preventDefault();
+
+//$("#submit-button").on("click", function(event) {
+  //console.log("button clicked");
+  //event.preventDefault();
+
+
 
       $(".row").css("display", "none");       //Amy added
       $(".search-results").css("display", "block");
+
 
 
   var inputResults = $("#input-city").val();
