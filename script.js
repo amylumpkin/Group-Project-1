@@ -40,7 +40,6 @@ $("#submit-button").on("click", function(event) {
       $(".row").css("display", "none");       //Amy added
       $(".search-results").css("display", "block");
 
-
   var inputResults = $("#input-city").val();
   console.log(inputResults);
 
@@ -50,7 +49,15 @@ $("#submit-button").on("click", function(event) {
     var queryURL =
     "http://api.wunderground.com/api/a4c1cc1f438c8eaf/conditions/q/"+ state + "/" + city +".json";
   // "http://api.wunderground.com/api/a4c1cc1f438c8eaf/conditions/q/NC/raleigh.json"
+
+    var queryURLair =
+    "http://api.waqi.info/search/?token=68441e6dfd4c245577443bc4809bdc431b170095&keyword="+city+"json";
+  //http://api.waqi.info/search/?token="+token()+"&keyword="+keyword  
 console.log(queryURL);
+console.log(queryURLair);
+=======
+console.log(queryURL);
+
 
   $.ajax({
     url:queryURL,
@@ -58,10 +65,27 @@ console.log(queryURL);
   }).then(function(response){
     console.log(response);
 
+    // console.log(response.current_observation.display_location.latitude); Test to pull latitude out
+
+
     $("#testing").append(response);
 
   });
+
+
+  $.ajax({
+      url:queryURLair,
+      method: "GET"
+    }).then(function(response){
+      console.log(response);
+    });
+
 })
+
+  
+=======
+})
+
 
 
 //end document ready function
