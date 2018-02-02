@@ -18,52 +18,17 @@
 <!-- firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
   
-
-
-
-<!-- original css within the html file 
-  <style>
-   /* 
-
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-      
-    }
-
-    .col-sm-4 {
-      width: 33.33333333%;
-      padding-top: 10px;
-    }
-
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-      text-align: center;
-    }
-    
-    .carousel-inner img {
-      width: 100%; 
-      margin: auto;
-    }
-    .site-description {
-      padding-top: 15px;
-      font-size: 
-    }
-/* Hide the carousel text when the screen is less than 600 pixels wide 
-        @media (max-width: 600px) {
-          .carousel-caption {
-            display: none; 
-          }
-        }
-*/
-  </style>
-              -->
-
 </head>
 
 
 <body>
+
+  <script  type="text/javascript"  charset="utf-8">  
+    (function(w,d,t,f){  w[f]=w[f]||function(c,k,n){s=w[f],k=s['k']=(s['k']||(k?('&k='+k):''));s['c']=  
+    c=(c  instanceof  Array)?c:[c];s['n']=n=n||0;L=d.createElement(t),e=d.getElementsByTagName(t)[0];  
+    L.async=1;L.src='//feed.aqicn.org/feed/'+(c[n].city)+'/'+(c[n].lang||'')+'/feed.v1.js?n='+n+k;  
+    e.parentNode.insertBefore(L,e);  };  })(  window,document,'script','_aqiFeed'  );    
+  </script>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -88,7 +53,7 @@
     <div class="carousel-inner" role="listbox">
       
       <div class="item active">
-        <img src="assets\moving is hard.jpg" alt="moving boxes" style="width:1200px;height:400px">
+        <img src="assets\moving is hard.jpg" alt="moving boxes" style="width:100%;height:400px">
         <div class="carousel-caption">
           <h2>Planning A Move?</h2>
           <p>Check Out the Area First!</p>
@@ -96,7 +61,7 @@
       </div>
 
       <div class="item">
-        <img src="assets\beach footprints.jpg" alt="on the beach" style="width:1200px;height:400px">
+        <img src="assets\beach footprints.jpg" alt="on the beach" style="width:100%;height:400px">
         <div class="carousel-caption">
           <h2>Vacation Time?</h2>
           <p>We Can Help You Choose a Destination!</p>
@@ -104,7 +69,7 @@
       </div>
 
       <div class="item">
-        <img src="assets\city roads night.jpg" alt="city at night" style="width:1200px;height:400px">
+        <img src="assets\city roads night.jpg" alt="city at night" style="width:100%;height:400px">
         <div class="carousel-caption">
           <h2>Explore Your Hometown...</h2>
           <p>...or any city in America!</p>
@@ -133,7 +98,7 @@
       <form id="search">
         <h3>Start Your Search: </h3>
         <form action="/action_page.php">
-         <select name="cars">
+         <select name="search-options">
            <option value="city-state">City, State</option>
            <option value="zipcode">Zip Code</option>
            <option value="near-me">Near Me</option>
@@ -144,32 +109,112 @@
          <input type="text" value id="input-city" placeholder="">
           <input type="submit" id="submit-button" value="search">
         </form>
-         <!-- <a href="second-page.html"> -->
+         
       </form>
-<!-- <input type="text" value id="input-neighborhood" placeholder="City, State">
-        <input type="text" value id="input-zip-code" placeholder="Zip Code">  -->
+
  
   <div class="row">
 
     <div class="col-sm-4">
       <h3>SCHOOLS</h3>
-      <img src="assets\kids-in-school.jpg" alt="kids in school" class="img-responsive" style="width:300px;height:300px">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <img src="assets\kids-in-school.jpg" alt="kids in school" class="img-responsive" style="width:400px;height:300px">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
     <div class="col-sm-4"> 
       <h3>CRIME</h3>
-      <img src="assets\happy cops.jpg"  class="img-responsive" style="width:300px;height:300px" alt="police">
-      <p></p>    
+      <img src="assets\happy cops.jpg"  class="img-responsive" style="width:400px;height:300px" alt="police">
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>    
     </div>
     <div class="col-sm-4"> 
       <h3>WEATHER</h3>
-      <img src="assets\sunny weather.jpg" class="img-responsive" style="width:300px;height:300px" alt="the sun">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>    
+      <img src="assets\sunny weather.jpg" class="img-responsive" style="width:400px;height:300px" alt="the sun">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>    
     </div>
     
   </div>
 </div><br>
 
+
+<div class="search-results">
+  <div id="city-name-here">
+    Placeholder City, NC
+  </div>
+
+  <!-- divs for each api we have -->
+     <div class="data-divs">
+
+        <div class="col-md-6">
+          <div id="schools">
+           <h1>Schools</h1>
+          <div class="row">
+            <p>Lorem ipsum...</p>
+          </div>
+          </div>
+        </div>
+    
+       <div class="col-md-6">
+        <div id="weather">
+          <h1>Weather</h1>
+            <div class="row">
+              <p>Lorem ipsum...</p>
+            </div>
+            </div>
+          </div>
+
+          <span  id="city-aqi-container"></span>  
+
+          <script type="text/jquery" charset="utf-8">
+            var city;
+            var state;
+            var inputResults = $("#input-city").val();
+            var address = inputResults.split(",");
+            state = address[1];
+            city = address[0];
+
+           
+    _aqiFeed({  container:"city-aqi-container",  city: "Raleigh"  });  
+          </script>
+
+        <div class="col-md-6">
+          <div id="crime">
+          <h1>Crime Statistics</h1>
+            <div class="row">
+              <p>Lorem ipsum...</p>
+              </div>
+            </div>
+          </div>
+
+         <div class="col-md-6">
+          <div id="concerts">
+          <h1>Concerts</h1>
+            <div class="row">
+              <p>Lorem ipsum...</p>
+              </div>
+            </div>
+          </div>
+        
+       <div class="col-md-6">
+        <div id="walkability">
+          <h1>Walkability</h1>
+            <div class="row">
+              <p>Lorem ipsum...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div id="parks">
+              <h1>Parks</h1>
+                <div class="row">
+                  <p>Lorem ipsum...</p>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+  </div>  
+
+<!-- Here is a widget found on Air Quality API.  Maybe we can include it in the weather API? -->
 
 
 <footer>
