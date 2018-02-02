@@ -27,11 +27,25 @@ console.log("testing page");
 var city;
 var state;
 
+$(document).ready(function () {
+    $.get('https://cors-anywhere.herokuapp.com/http://jsonip.com', function (res) {
+        (console.log)('IP Address is: ' + res.ip);
+    });
+});
+
+// $(document).ready(function () {
+//   $.getJSON("http://smart-ip.net/geoip-json?callback=", function(data) {
+//       console.log('My IP Address is: ' + data.host);
+//   });
+// });
+
+
+
 $("#submit-button").on("click", function(event) {
   console.log("button clicked");
   event.preventDefault();
 
-  var inputResults = $("#input-neighborhood").val();
+  var inputResults = $("#input-city").val();
   console.log(inputResults);
 
   var address = inputResults.split(",");
