@@ -25,7 +25,7 @@
 $(document).ready(function() {
 
 $(".row").css("display", "block");
-$(".search-results").css("display", "none");
+$(".search-results").css("display", "none");    //Amy added
 
 console.log("testing page");
 
@@ -55,7 +55,7 @@ $("#submit-button").on("click", function(event) {
   //http://api.waqi.info/search/?token="+token()+"&keyword="+keyword  
 console.log(queryURL);
 console.log(queryURLair);
-=======
+
 console.log(queryURL);
 
 
@@ -83,10 +83,9 @@ console.log(queryURL);
 })
 
   
-=======
 })
 
 
 
-//end document ready function
-})
+
+
