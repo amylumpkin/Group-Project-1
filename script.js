@@ -48,7 +48,7 @@ $("#submit-button").on("click", function(event) {
   var inputResults = $("#input-city").val();
   console.log(inputResults);
 
-  var address = inputResults.split(",");
+  var address = inputResults.split(", ");
   state = address[1];
   city = address[0];
 
@@ -61,7 +61,7 @@ $("#submit-button").on("click", function(event) {
     "http://api.waqi.info/search/?token=68441e6dfd4c245577443bc4809bdc431b170095&keyword="+city+"json";
   //http://api.waqi.info/search/?token="+token()+"&keyword="+keyword  
     var queryURLyelpr
-    var queryURLschool = "https://api.schooldigger.com/v1.1/schools?st="+ state +"&city="+ city+ "&perPage=2&sortBy=rank&appID=7c44cfcc&appKey=53c1651cdc939f078f21cf3bdaf98356";
+    var queryURLschool = "https://api.schooldigger.com/v1.1/rankings/schools/"+state+"?level=Middle&perPage=2&appID=7c44cfcc&appKey=53c1651cdc939f078f21cf3bdaf98356";
    //https://api.schooldigger.com/v1.1/schools?st="+ state +"&city="+ city+ "&perPage=2&sortBy=rank&appID=&appKey=
 
 //Console Logging all the query urls
