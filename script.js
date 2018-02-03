@@ -24,7 +24,7 @@ $(document).ready(function() {
   // accepts the user's input and splits the string into useable data for API's State, City
 
   $("#submit-button").on("click", function(event) {
-    console.log("button clicked");
+    // console.log("button clicked");
     event.preventDefault();
 
     $(".row").css("display", "none"); //Amy added
